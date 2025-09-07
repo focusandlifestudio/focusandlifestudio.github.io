@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Pinterest OAuth</title>
+<h1>OAuth: Done</h1>
+<p>Copy the code below and send it to your server to exchange for an access token.</p>
+<pre id="out">Waiting...</pre>
+<script>
+  const p = new URLSearchParams(location.search);
+  const code = p.get('code');
+  document.getElementById('out').textContent = code ? code : 'No code in URL';
+</script>
